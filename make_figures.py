@@ -61,7 +61,9 @@ plt.rcParams.update({
     "axes.spines.right": False,
     "axes.grid": True,
     "grid.alpha": 0.25,
-    "figure.dpi": 120,
+    # 240 = 120 x 2: the published figures were laid out on a 2x (Retina) macOS
+    # canvas. With the Agg backend this reproduces that layout on any platform.
+    "figure.dpi": 240,
     "svg.hashsalt": "cdm",  # reproducible SVG ids
 })
 
